@@ -14,9 +14,6 @@ on:
       - "!.github/**"
       - ".github/workflows/checks.yml" # Still include current workflow
   pull_request:
-    branches:
-      - main
-      - dev*
     paths:
       - "**"
       - "!.devcontainer/**"
