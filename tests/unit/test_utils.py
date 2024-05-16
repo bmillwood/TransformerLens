@@ -14,6 +14,10 @@ tensor_row0_dim1 = torch.tensor([1, 2, 3, 4, 5])
 shape_1 = tensor_row0_dim1.shape
 
 
+def test_is_mps():
+    assert torch.backends.mps.is_available()
+
+
 class TestSlice:
     @pytest.mark.parametrize(
         "input_slice, expected_shape",
