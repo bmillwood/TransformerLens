@@ -15,6 +15,7 @@ shape_1 = tensor_row0_dim1.shape
 
 
 def test_is_mps():
+    assert torch.backends.mps.is_built()
     assert torch.backends.mps.is_available()
 
 
