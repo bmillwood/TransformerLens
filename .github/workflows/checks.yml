@@ -47,7 +47,7 @@ jobs:
       - shell: bash
         run: system_profiler -listDataTypes
       - shell: bash
-        run: system_profiler -json
+        run: system_profiler -json SPDisplaysDataType SPHardwareDataType SPDeveloperToolsDataType
 
   compatibility-checks:
     name: Compatibility Checks
