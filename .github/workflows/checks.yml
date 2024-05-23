@@ -45,6 +45,8 @@ jobs:
           - macos-latest
     steps:
       - shell: bash
+        run: system_profiler -listDataTypes
+      - shell: bash
         run: system_profiler -json
 
   compatibility-checks:
