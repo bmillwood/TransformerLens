@@ -35,6 +35,18 @@ permissions:
   contents: write
 
 jobs:
+  runner-info:
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      fail-fast: false
+      matrix:
+        runs-on:
+          - macos-13
+          - macos-latest
+    steps:
+      - shell: bash
+        run: system_profiler -json
+
   compatibility-checks:
     name: Compatibility Checks
     runs-on: ${{ matrix.runs-on }}
